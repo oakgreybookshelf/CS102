@@ -22,8 +22,8 @@ def callname():
     try:
         for char in string:
             if char in number:
-                raise ValueErrorException
-    Except ValueError:
-        print('All characters must be letters')
+                raise ValueError
+    except ValueError:
+        print('Error: All characters must be letters')
 
 callname()
