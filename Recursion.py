@@ -19,6 +19,34 @@ a = int(input("enter 1st number"))
 b = int(input("enter last number"))
 print( a, "to the power of", b, "is", raise_to_power(a, b))
 
+# division
+def divide(divisor, dividend, count=0):
+    if divisor == 0 :
+        return count
+    else:
+        count += 1
+        return divide(divisor - dividend, dividend, count)
+
+a = int(input("enter 1st number (divisor) "))
+b = int(input("enter last number (dividend) "))
+print("the quotient of", a, "and", b, "is", divide(a, b, count=0))
+
+# division with try/except block
+def divide(divisor, dividend, count=0):
+    try:
+        if divisor == 0 :
+            return count
+        else:
+            count += 1
+            return divide(divisor - dividend, dividend, count)
+    except RuntimeError:
+        print("Error: These numbers are not divisible, try again")
+
+a = int(input("enter 1st number (divisor) "))
+b = int(input("enter last number (dividend) "))
+print("the quotient of", a, "and", b, "is", divide(a, b, count=0))
+
+
 
 def triangle_of_stars(n):
     if n > 0:
