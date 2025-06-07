@@ -11,11 +11,10 @@ print("the product of", a, "and", b, "is", multiply(a, b))
 
 # exponent
 def raise_to_power(a, b):
-  c = 1
-    for i in range(b):
-    c *= b
-  raise_to_power(a-1, b)
-  return(c)
+  if b == 0:
+      return 1
+  else:
+    return a * raise_to_power(a, b-1)
 a = int(input("enter 1st number"))
 b = int(input("enter last number"))
 print( a, "to the power of", b, "is", raise_to_power(a, b))
