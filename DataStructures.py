@@ -25,7 +25,7 @@ print('Students with a peanut allergy:', allergies['Peanuts'])
 print('Students with a peanut allergy:', allergies.get('Peanuts'))
 # gets value and returns a statement if value not in dict
 print('Students with a peanut allergy:', allergies.get('Soy', 'No students have this allergy'))
-# get key for value
+# GET KEY FOR VALUE       .......work in progress.....
 for key, value in allergies:
     if value == 'Tobi':
         print('Tobi\'s allergy is', key)
