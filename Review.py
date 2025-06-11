@@ -27,3 +27,9 @@ def callname():
         print('Error: All characters must be letters')
 
 callname()
+
+input1 = input("Enter 'S' to start: ")
+while input1 == 'S':
+    print("Program is continue")
+    input1 = input("Enter 'S' to start: ")
+print("Program is finished")
