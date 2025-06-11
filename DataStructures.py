@@ -1,3 +1,4 @@
+# https://learn.zybooks.com/zybook/WNECS102IT102WalzSpring2025/chapter/9/section/6
 # dictionaries are case-sensitive
 mydict = {'Ten': 10, 'Twenty': 20, 'Thirty': 30}
 
