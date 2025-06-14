@@ -27,12 +27,14 @@ print('Students with a peanut allergy:', allergies.get('Peanuts'))
 # gets value and returns a statement if value not in dict
 print('Students with a peanut allergy:', allergies.get('Soy', 'No students have this allergy'))
 
-# GET KEY FOR VALUE ### (one value per key)
+# GET KEY FOR VALUE ### (one value per key)     -----------------
 print([k for k, v in mydict.items() if v == 10])
-# GET KEY FOR VALUE       .......work in progress.....
-for key, value in allergies:
-    if value == 'Tobi':
-        print('Tobi\'s allergy is', key)
+# GET KEY FOR VALUE      (values are lists)     -----------------
+matching_keys = [
+    key for key, value in allergies.items()
+    if isinstance(value, list) and 'Tobi' in value
+]
+print("Tobi's alergies:", matching_keys)
       
 # prints as tuple
 print(allergies.items())
