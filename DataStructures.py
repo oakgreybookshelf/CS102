@@ -26,10 +26,14 @@ print('Students with a peanut allergy:', allergies['Peanuts'])
 print('Students with a peanut allergy:', allergies.get('Peanuts'))
 # gets value and returns a statement if value not in dict
 print('Students with a peanut allergy:', allergies.get('Soy', 'No students have this allergy'))
+
+# GET KEY FOR VALUE ### (one value per key)
+print([k for k, v in mydict.items() if v == 10])
 # GET KEY FOR VALUE       .......work in progress.....
 for key, value in allergies:
     if value == 'Tobi':
         print('Tobi\'s allergy is', key)
+      
 # prints as tuple
 print(allergies.items())
 #print all keys
@@ -39,6 +43,9 @@ print(allergies.values())
 # merges two dictionaries without saving 2nd dictionary name
 allergies.update(Severity)	
 print(allergies)
+# printing key-value pairs
+for key, value in allergies.items():  
+    print(f"{key}: {value}")
 
 # List: append
 allergies['Alternatives']['Jerky'].append('Sonya')
